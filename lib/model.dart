@@ -31,3 +31,9 @@ class Doc {
     required this.drNames,
   });
 }
+
+class Services {
+  String name;
+  String image;
+  Services({required this.name, required this.image});
+}

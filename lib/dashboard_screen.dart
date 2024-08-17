@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_care_app/grooming_screen.dart';
 import 'package:pet_care_app/model.dart';
 import 'package:pet_care_app/veterinary_screen.dart';
 
@@ -29,7 +30,10 @@ class __MyDashBoardState extends State<MyDashBoard> {
       case 'Veterinary':
         screen = VeterinaryScreen();
         break;
-      // Implement other categories as needed
+      case 'Grooming':
+        screen = Grooming();
+        break;
+
       default:
         screen = const Scaffold(
           body: Center(
