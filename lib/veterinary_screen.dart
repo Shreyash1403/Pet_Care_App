@@ -4,6 +4,7 @@ import 'package:pet_care_app/dashboard_screen.dart';
 import 'package:pet_care_app/detail_doctor_screen.dart';
 import 'package:pet_care_app/model.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_care_app/shop_screen.dart';
 
 class VeterinaryScreen extends StatefulWidget {
   const VeterinaryScreen({super.key});
@@ -65,7 +66,10 @@ class _VeterinaryScreenState extends State<VeterinaryScreen> {
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => VeterinaryScreen()));
         break;
-      // Add more cases for other indices as needed
+      case 2:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => ShopScreen()));
+        break;
     }
   }
 

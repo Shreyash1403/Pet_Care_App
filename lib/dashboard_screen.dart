@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_care_app/grooming_screen.dart';
 import 'package:pet_care_app/model.dart';
+import 'package:pet_care_app/shop_screen.dart';
+import 'package:pet_care_app/training_screen.dart';
 import 'package:pet_care_app/veterinary_screen.dart';
 
 class MyDashBoard extends StatefulWidget {
@@ -33,6 +35,9 @@ class __MyDashBoardState extends State<MyDashBoard> {
       case 'Grooming':
         screen = Grooming();
         break;
+      case 'Training':
+        screen = TrainingScreen();
+        break;
 
       default:
         screen = const Scaffold(
@@ -57,10 +62,13 @@ class __MyDashBoardState extends State<MyDashBoard> {
             .push(MaterialPageRoute(builder: (context) => const MyDashBoard()));
         break;
       case 1:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => VeterinaryScreen()));
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const VeterinaryScreen()));
         break;
-      // Add more cases for other indices as needed
+      case 2:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => const ShopScreen()));
+        break;
     }
   }
 
